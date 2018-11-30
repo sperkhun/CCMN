@@ -68,7 +68,6 @@ class LineChart: CombinedChartView, ChartViewDelegate {
         var eight: [ChartDataEntry] = []
         let max = MainData.dwellX.count
 
-        
         for i in 0..<MainData.dwellTime.count {
             let x = Double(i) + 0.5
             let dataEntry = ChartDataEntry(x: x, y: Double(MainData.dwellTime[i].fiveThirtyMin))
@@ -82,7 +81,6 @@ class LineChart: CombinedChartView, ChartViewDelegate {
             let dataEntry4 = ChartDataEntry(x: x, y: Double(MainData.dwellTime[i].eightPlusHour))
             eight.append(dataEntry4)
         }
-//        let ft = ScatterChartDataSet(
         let ftDataSet = ScatterChartDataSet(values: five, label: "5-30 mins")
         let tsDataSet = ScatterChartDataSet(values: thirty, label: "30-60 mins")
         let ofDataSet = ScatterChartDataSet(values: one, label: "1-5 hours")
@@ -107,7 +105,6 @@ class LineChart: CombinedChartView, ChartViewDelegate {
         for i in 0..<scatterSet.count {
             scatterSet[i].colors = [colors[i]]
             scatterSet[i].setScatterShape(shapes[i])
-//            scatterSet[i].
             scatterSet[i].drawValuesEnabled = false
             scatterSet[i].scatterShapeSize = 8
         }
@@ -129,7 +126,7 @@ class LineChart: CombinedChartView, ChartViewDelegate {
         self.data = chartData
         self.drawMarkers = true
         self.animate(yAxisDuration: 1.0, easingOption: .linear)
-        let  marker =  BalloonMarker(color: UIColor.black, font: UIFont.systemFont(ofSize: 10), textColor: UIColor.white, insets: UIEdgeInsetsMake(2.0, 2.0, 10.0, 2.0))
+        let  marker =  BalloonMarker(color: UIColor.black, font: UIFont.systemFont(ofSize: 10), textColor: UIColor.white, insets: UIEdgeInsetsMake(2.0, 2.0, 10.0, 2.0), type: "none", totalY: 0)
         self.marker = marker
     }
     
@@ -157,7 +154,6 @@ class LineChart: CombinedChartView, ChartViewDelegate {
             let dataEntry4 = ChartDataEntry(x: x, y: Double(MainData.repeatVisitors[i].yesterday))
             yesterday.append(dataEntry4)
         }
-        //        let ft = ScatterChartDataSet(
         let dDataSet = ScatterChartDataSet(values: daily, label: "Daily")
         let wDataSet = ScatterChartDataSet(values: weekly, label: "Weekly")
         let oDataSet = ScatterChartDataSet(values: occasional, label: "Occasional")
@@ -191,7 +187,7 @@ class LineChart: CombinedChartView, ChartViewDelegate {
         chartData.lineData = LineChartData(dataSets: lineSet)
         chartData.scatterData = ScatterChartData(dataSets: scatterSet)
         
-        let formatter = CustomLabelsXAxisValueFormatter()//custom value formatter
+        let formatter = CustomLabelsXAxisValueFormatter()
         let xAxis = self.xAxis
         xAxis.axisMinimum = 0
         xAxis.axisMaximum = Double(max)
@@ -205,12 +201,11 @@ class LineChart: CombinedChartView, ChartViewDelegate {
         self.data = chartData
         self.drawMarkers = true
         self.animate(yAxisDuration: 1.0, easingOption: .linear)
-        let  marker =  BalloonMarker(color: UIColor.black, font: UIFont.systemFont(ofSize: 10), textColor: UIColor.white, insets: UIEdgeInsetsMake(2.0, 2.0, 10.0, 2.0))
+        let  marker =  BalloonMarker(color: UIColor.black, font: UIFont.systemFont(ofSize: 10), textColor: UIColor.white, insets: UIEdgeInsetsMake(2.0, 2.0, 10.0, 2.0), type: "none", totalY: 0)
         self.marker = marker
     }
     
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         self.marker?.refreshContent(entry: entry, highlight: highlight)
     }
-    
 }

@@ -16,13 +16,15 @@ open class BalloonMarker: MarkerImage
     open var textColor: UIColor?
     open var insets = UIEdgeInsets()
     open var minimumSize = CGSize()
+    open var type: String!
+    open var totalY: Double = 0
     
     fileprivate var labelns: NSString?
     fileprivate var _labelSize: CGSize = CGSize()
     fileprivate var _paragraphStyle: NSMutableParagraphStyle?
     fileprivate var _drawAttributes = [NSAttributedStringKey : Any]()
     
-    public init(color: UIColor, font: UIFont, textColor: UIColor, insets: UIEdgeInsets)
+    public init(color: UIColor, font: UIFont, textColor: UIColor, insets: UIEdgeInsets, type: String, totalY: Double)
     {
         super.init()
         
@@ -30,6 +32,8 @@ open class BalloonMarker: MarkerImage
         self.font = font
         self.textColor = textColor
         self.insets = insets
+        self.type = type
+        self.totalY = totalY
         
         _paragraphStyle = NSParagraphStyle.default.mutableCopy() as? NSMutableParagraphStyle
         _paragraphStyle?.alignment = .center
@@ -113,9 +117,14 @@ open class BalloonMarker: MarkerImage
     
     open override func refreshContent(entry: ChartDataEntry, highlight: Highlight)
     {
-        setLabel(String(entry.y))
+        switch self.type {
+        case "pie" :
+            setLabel(String(format:" %.1f%%  ", entry.y / self.totalY * 100) + "\n" + String(format:" (%.0f) ", entry.y))
+        default :
+            setLabel(String(format:"%.0f", entry.y))
+        }
     }
-    
+
     open func setLabel(_ label: String)
     {
         labelns = label as NSString

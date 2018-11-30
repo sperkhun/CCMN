@@ -3,24 +3,32 @@ PODS:
   - Charts (3.0.5):
     - Charts/Core (= 3.0.5)
   - Charts/Core (3.0.5)
+  - MachineLearningKit (0.1.8):
+    - Upsurge
   - SwiftyJSON (4.2.0)
+  - Upsurge (0.10.2)
 
 DEPENDENCIES:
   - Alamofire
   - Charts (~> 3.0.5)
+  - MachineLearningKit (~> 0.1)
   - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Charts
+    - MachineLearningKit
     - SwiftyJSON
+    - Upsurge
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Charts: 45cdc985b764c838b35ee47eb1365d15735f6d1a
+  MachineLearningKit: a2b08488977e79eb075c771c7154ef044f95d5f8
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  Upsurge: 5866beadc3da27f91c5df4ac795deb3f3238d678
 
-PODFILE CHECKSUM: 21172983d78d44b3df7cebf684538ef493e4704d
+PODFILE CHECKSUM: 4190835bcd5eba972eb5743efd866da3e677ea53
 
 COCOAPODS: 1.5.3

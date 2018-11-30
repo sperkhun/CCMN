@@ -9,16 +9,23 @@
 /* Begin PBXBuildFile section */
 		113E23C02536A5741084653B /* Pods_CCMN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AC0064C50AD2F1A8753872 /* Pods_CCMN.framework */; };
 		1E7520DF2198846500913FB8 /* Correlations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7520DE2198846500913FB8 /* Correlations.swift */; };
+		1EAAC039219EC532005CBD9B /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAAC038219EC532005CBD9B /* Prediction.swift */; };
+		1EAE3FC221A56F670008A6E5 /* XAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAE3FC121A56F670008A6E5 /* XAxisValueFormatter.swift */; };
+		1EAF962821A1662B0034F961 /* PredictionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAF962721A1662B0034F961 /* PredictionViewController.swift */; };
+		1ECD71E621A1AC53009A9588 /* SimpleLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD71E521A1AC53009A9588 /* SimpleLineChart.swift */; };
 		1EF305BD21944D13008E6BDD /* CiscoRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7BA7021908F56006C36AF /* CiscoRequests.swift */; };
-		A816E3812191CA7C000880A8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A816E3802191CA7C000880A8 /* FirstViewController.swift */; };
-		A816E3832191CA88000880A8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A816E3822191CA88000880A8 /* SecondViewController.swift */; };
+		1EF4FBC2219C23B90007A6A4 /* CorrelationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF4FBC1219C23B90007A6A4 /* CorrelationViewController.swift */; };
+		1EF4FBC4219C33D50007A6A4 /* StatisticBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF4FBC3219C33D50007A6A4 /* StatisticBar.swift */; };
+		1EFAA496219B36840030F8FC /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAA495219B36840030F8FC /* PieChart.swift */; };
+		A816E3812191CA7C000880A8 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A816E3802191CA7C000880A8 /* StatisticsViewController.swift */; };
+		A816E3832191CA88000880A8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A816E3822191CA88000880A8 /* SearchViewController.swift */; };
 		A816E3852191CF90000880A8 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A816E3842191CF90000880A8 /* Parser.swift */; };
 		A86B9DE1218F313A006D0566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86B9DE0218F313A006D0566 /* AppDelegate.swift */; };
 		A86B9DE6218F313A006D0566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86B9DE4218F313A006D0566 /* Main.storyboard */; };
 		A86B9DE8218F313A006D0566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A86B9DE7218F313A006D0566 /* Assets.xcassets */; };
 		A86B9DEB218F313A006D0566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A86B9DE9218F313A006D0566 /* LaunchScreen.storyboard */; };
 		A86CCC3321972AF90084C464 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CCC3221972AF90084C464 /* PopupViewController.swift */; };
-		A86CCC3521973F8B0084C464 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CCC3421973F8B0084C464 /* ThirdViewController.swift */; };
+		A86CCC3521973F8B0084C464 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86CCC3421973F8B0084C464 /* MapsViewController.swift */; };
 		A8DA59B321999A78006F7D6B /* GroupBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA59B221999A78006F7D6B /* GroupBar.swift */; };
 		A8DA59B82199B95B006F7D6B /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA59B72199B95B006F7D6B /* BalloonMarker.swift */; };
 		A8DA59BC2199DAE8006F7D6B /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA59BB2199DAE8006F7D6B /* LineChart.swift */; };
@@ -27,11 +34,18 @@
 
 /* Begin PBXFileReference section */
 		1E7520DE2198846500913FB8 /* Correlations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Correlations.swift; sourceTree = "<group>"; };
+		1EAAC038219EC532005CBD9B /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
+		1EAE3FC121A56F670008A6E5 /* XAxisValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XAxisValueFormatter.swift; sourceTree = "<group>"; };
+		1EAF962721A1662B0034F961 /* PredictionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionViewController.swift; sourceTree = "<group>"; };
+		1ECD71E521A1AC53009A9588 /* SimpleLineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLineChart.swift; sourceTree = "<group>"; };
+		1EF4FBC1219C23B90007A6A4 /* CorrelationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrelationViewController.swift; sourceTree = "<group>"; };
+		1EF4FBC3219C33D50007A6A4 /* StatisticBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticBar.swift; sourceTree = "<group>"; };
+		1EFAA495219B36840030F8FC /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 		4CAE07459A87C6DC82564F42 /* Pods-CCMN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMN.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCMN/Pods-CCMN.release.xcconfig"; sourceTree = "<group>"; };
 		75AC0064C50AD2F1A8753872 /* Pods_CCMN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCMN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE71796283ECD25FF399994 /* Pods-CCMN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCMN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCMN/Pods-CCMN.debug.xcconfig"; sourceTree = "<group>"; };
-		A816E3802191CA7C000880A8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		A816E3822191CA88000880A8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A816E3802191CA7C000880A8 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		A816E3822191CA88000880A8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A816E3842191CF90000880A8 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		A86B9DDD218F313A006D0566 /* CCMN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCMN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86B9DE0218F313A006D0566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +54,7 @@
 		A86B9DEA218F313A006D0566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A86B9DEC218F313A006D0566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A86CCC3221972AF90084C464 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
-		A86CCC3421973F8B0084C464 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		A86CCC3421973F8B0084C464 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
 		A8DA59B221999A78006F7D6B /* GroupBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBar.swift; sourceTree = "<group>"; };
 		A8DA59B72199B95B006F7D6B /* BalloonMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
 		A8DA59BB2199DAE8006F7D6B /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
@@ -60,6 +74,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EAE3FC321A570AB0008A6E5 /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				1EAAC038219EC532005CBD9B /* Prediction.swift */,
+				1E7520DE2198846500913FB8 /* Correlations.swift */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		1EAE3FC421A570E50008A6E5 /* RawDataProcessing */ = {
+			isa = PBXGroup;
+			children = (
+				A816E3842191CF90000880A8 /* Parser.swift */,
+				A8E7BA7021908F56006C36AF /* CiscoRequests.swift */,
+				A8E7BA6E21908B9F006C36AF /* MainData.swift */,
+			);
+			path = RawDataProcessing;
+			sourceTree = "<group>";
+		};
 		3F01303A91B51F6138FA9503 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,10 +128,8 @@
 				A8DA59B92199D78E006F7D6B /* ViewControllers */,
 				A8DA59B62199B940006F7D6B /* Charts */,
 				A86B9DEC218F313A006D0566 /* Info.plist */,
-				A8E7BA6E21908B9F006C36AF /* MainData.swift */,
-				1E7520DE2198846500913FB8 /* Correlations.swift */,
-				A8E7BA7021908F56006C36AF /* CiscoRequests.swift */,
-				A816E3842191CF90000880A8 /* Parser.swift */,
+				1EAE3FC321A570AB0008A6E5 /* Additional */,
+				1EAE3FC421A570E50008A6E5 /* RawDataProcessing */,
 			);
 			path = CCMN;
 			sourceTree = "<group>";
@@ -107,8 +138,12 @@
 			isa = PBXGroup;
 			children = (
 				A8DA59B221999A78006F7D6B /* GroupBar.swift */,
+				1EF4FBC3219C33D50007A6A4 /* StatisticBar.swift */,
 				A8DA59B72199B95B006F7D6B /* BalloonMarker.swift */,
+				1EFAA495219B36840030F8FC /* PieChart.swift */,
 				A8DA59BB2199DAE8006F7D6B /* LineChart.swift */,
+				1ECD71E521A1AC53009A9588 /* SimpleLineChart.swift */,
+				1EAE3FC121A56F670008A6E5 /* XAxisValueFormatter.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -116,9 +151,11 @@
 		A8DA59B92199D78E006F7D6B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A816E3802191CA7C000880A8 /* FirstViewController.swift */,
-				A816E3822191CA88000880A8 /* SecondViewController.swift */,
-				A86CCC3421973F8B0084C464 /* ThirdViewController.swift */,
+				A816E3802191CA7C000880A8 /* StatisticsViewController.swift */,
+				A816E3822191CA88000880A8 /* SearchViewController.swift */,
+				A86CCC3421973F8B0084C464 /* MapsViewController.swift */,
+				1EAF962721A1662B0034F961 /* PredictionViewController.swift */,
+				1EF4FBC1219C23B90007A6A4 /* CorrelationViewController.swift */,
 				A86CCC3221972AF90084C464 /* PopupViewController.swift */,
 			);
 			path = ViewControllers;
@@ -239,13 +276,17 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CCMN/Pods-CCMN-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/MachineLearningKit/MachineLearningKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Upsurge/Upsurge.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MachineLearningKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Upsurge.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -259,8 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A816E3832191CA88000880A8 /* SecondViewController.swift in Sources */,
-				A816E3812191CA7C000880A8 /* FirstViewController.swift in Sources */,
+				1EF4FBC4219C33D50007A6A4 /* StatisticBar.swift in Sources */,
+				1EFAA496219B36840030F8FC /* PieChart.swift in Sources */,
+				A816E3832191CA88000880A8 /* SearchViewController.swift in Sources */,
+				A816E3812191CA7C000880A8 /* StatisticsViewController.swift in Sources */,
 				1EF305BD21944D13008E6BDD /* CiscoRequests.swift in Sources */,
 				1E7520DF2198846500913FB8 /* Correlations.swift in Sources */,
 				A8DA59B82199B95B006F7D6B /* BalloonMarker.swift in Sources */,
@@ -268,8 +311,13 @@
 				A8DA59B321999A78006F7D6B /* GroupBar.swift in Sources */,
 				A86B9DE1218F313A006D0566 /* AppDelegate.swift in Sources */,
 				A8DA59BC2199DAE8006F7D6B /* LineChart.swift in Sources */,
+				1EF4FBC2219C23B90007A6A4 /* CorrelationViewController.swift in Sources */,
+				1EAAC039219EC532005CBD9B /* Prediction.swift in Sources */,
+				1EAF962821A1662B0034F961 /* PredictionViewController.swift in Sources */,
 				A816E3852191CF90000880A8 /* Parser.swift in Sources */,
-				A86CCC3521973F8B0084C464 /* ThirdViewController.swift in Sources */,
+				1EAE3FC221A56F670008A6E5 /* XAxisValueFormatter.swift in Sources */,
+				A86CCC3521973F8B0084C464 /* MapsViewController.swift in Sources */,
+				1ECD71E621A1AC53009A9588 /* SimpleLineChart.swift in Sources */,
 				A86CCC3321972AF90084C464 /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

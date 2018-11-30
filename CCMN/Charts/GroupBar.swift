@@ -8,34 +8,15 @@
 
 import Charts
 
-class CustomLabelsXAxisValueFormatter : NSObject, IAxisValueFormatter {
-    
-    var labels: [String] = []
-    
-    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        let count = self.labels.count
-        guard let axis = axis, count > 0 else {
-            return ""
-        }
-        let factor = axis.axisMaximum / Double(count)
-        let index = Int((value / factor).rounded())
-//        print(index)
-        if index >= 0 && index < count {
-            return self.labels[index]
-        }
-        return ""
-    }
-}
-
 class GroupBar: BarChartView, ChartViewDelegate {
-    
-//    let hours = ["12-1", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9", "9-10", "10-11", "11-12", "12-1", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9", "9-10", "10-11", "11-12"]
-    var curArr: [String] = []
-    required init?(coder aDecoder: NSCoder) {
+
+        var curArr: [String] = []
+        required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
         self.backgroundColor = .white
         self.chartDescription?.enabled = false
+        self.chartDescription?.position = CGPoint(x: 100, y: 5)
         self.delegate = self
         
         //legend
@@ -63,7 +44,6 @@ class GroupBar: BarChartView, ChartViewDelegate {
         xaxis.granularityEnabled = true
         xaxis.enabled = true
         xaxis.forceLabelsEnabled = true
-
     }
     
     func drawChart() {
@@ -71,8 +51,8 @@ class GroupBar: BarChartView, ChartViewDelegate {
         var passerby: [BarChartDataEntry] = []
         var visitors: [BarChartDataEntry] = []
         var connected: [BarChartDataEntry] = []
-        let max = MainData.proximityX.count
-        for i in 0..<MainData.passersby.count {
+        let max = curArr.count
+        for i in 0..<curArr.count {
             let dataEntry = BarChartDataEntry(x: Double(MainData.passersby[i].hour), y: Double(MainData.passersby[i].qty))
             passerby.append(dataEntry)
             let dataEntry1 = BarChartDataEntry(x: Double(MainData.visitors[i].hour), y: Double(MainData.visitors[i].qty))
@@ -97,7 +77,7 @@ class GroupBar: BarChartView, ChartViewDelegate {
         chartData.barWidth = barWidth
         chartData.groupBars(fromX: 0, groupSpace: groupSpace, barSpace: barSpace)
         let gg = chartData.groupWidth(groupSpace: groupSpace, barSpace: barSpace)
-        let formatter = CustomLabelsXAxisValueFormatter()//custom value formatter
+        let formatter = CustomLabelsXAxisValueFormatter()
         let xAxis = self.xAxis
         xAxis.axisMinimum = 0
         xAxis.axisMaximum = gg * Double(max)
@@ -111,13 +91,12 @@ class GroupBar: BarChartView, ChartViewDelegate {
         self.data = chartData
         self.drawMarkers = true
         self.animate(yAxisDuration: 1.0, easingOption: .linear)
-        let  marker =  BalloonMarker(color: UIColor.black, font: UIFont.systemFont(ofSize: 10), textColor: UIColor.white, insets: UIEdgeInsetsMake(2.0, 2.0, 10.0, 2.0))
+        let  marker =  BalloonMarker(color: UIColor.black, font: UIFont.systemFont(ofSize: 10), textColor: UIColor.white, insets: UIEdgeInsetsMake(2.0, 2.0, 10.0, 2.0), type: "none", totalY: 0)
         self.marker = marker
     }
     
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         self.marker?.refreshContent(entry: entry, highlight: highlight)
     }
-
     
 }

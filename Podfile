@@ -9,4 +9,5 @@ target 'CCMN' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'Charts','~>3.0.5'
+  pod 'MachineLearningKit', '~> 0.1'
 end
